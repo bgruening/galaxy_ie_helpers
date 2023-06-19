@@ -12,6 +12,17 @@ setup(
     license='LICENSE',
     keywords = ['Galaxy', 'Interactive Environments'],
     scripts=['bin/get', 'bin/put','bin/get_user_history'],
+    entry_points={
+        'console_scripts': [
+            'gx-get = galaxy_ie_helpers.cli:gx_get',
+            'gx-put = galaxy_ie_helpers.cli:gx_put',
+            'gx-get-user-history = galaxy_ie_helpers.cli:gx_get_user_history',
+            # The old names
+            'get = galaxy_ie_helpers.cli:gx_get',
+            'put = galaxy_ie_helpers.cli:gx_put',
+            'get_user_history = galaxy_ie_helpers.cli:gx_get_user_history',
+        ],
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
