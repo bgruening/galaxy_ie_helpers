@@ -1,4 +1,4 @@
-# Galaxy IE helpers [![PyPI](https://img.shields.io/pypi/v/galaxy-ie-helpers.svg?style=flat-square)](https://pypi.python.org/pypi/galaxy-ie-helpers/) [![Build Status](https://travis-ci.org/bgruening/galaxy_ie_helpers.svg?branch=master)](https://travis-ci.org/bgruening/galaxy_ie_helpers)
+# Galaxy IE helpers [![PyPI](https://img.shields.io/pypi/v/galaxy-ie-helpers.svg?style=flat-square)](https://pypi.org/project/galaxy-ie-helpers/) [![CI](https://github.com/bgruening/galaxy_ie_helpers/actions/workflows/ci.yml/badge.svg)](https://github.com/bgruening/galaxy_ie_helpers/actions/workflows/ci.yml)
 
 Script collection used by Galaxy Interactive Environments.
 

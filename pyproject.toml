@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "galaxy-ie-helpers"
+version = "0.3.0"
+description = "Helper scripts to work with Galaxy's Interactive Environments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Bjoern A. Gruening", email = "bjoern.gruening@gmail.com" },
+    { name = "Helena Rasche" },
+]
+keywords = ["Galaxy", "Interactive Environments"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Code Generators",
+]
+dependencies = [
+    "bioblend",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8",
+    "ruff>=0.15",
+]
+
+[project.urls]
+Homepage = "https://github.com/bgruening/galaxy_ie_helpers"
+Issues = "https://github.com/bgruening/galaxy_ie_helpers/issues"
+
+[project.scripts]
+get = "galaxy_ie_helpers.cli:get"
+put = "galaxy_ie_helpers.cli:put"
+get_user_history = "galaxy_ie_helpers.cli:get_user_history"
+gx-get = "galaxy_ie_helpers.cli:get"
+gx-put = "galaxy_ie_helpers.cli:put"
+gx-get-user-history = "galaxy_ie_helpers.cli:get_user_history"
+
+[tool.setuptools]
+packages = ["galaxy_ie_helpers"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E4", "E7", "E9", "F", "I", "UP"]
